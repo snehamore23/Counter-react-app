@@ -1,14 +1,18 @@
 .product-card{
     border-radius: 10px;
-    margin: 16px;
-    width:200px;
+    margin: 12px;
+    width: 240px;
     padding: 16px;
     border: 1px solid #ccc;
-     box-shadow: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    position: relative;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background: #fff;
 }
 
 .product-card:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
     border-color: #888;
 }
 .product-price{
@@ -19,6 +23,57 @@
 }
 .product-image{
     width: 100%;
-    height: auto;
+    height: 200px;
+    object-fit: cover;
     border-radius: 10px;
+    
 }
+.discount-badge{
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background-color: #e53935;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 700;
+}
+.quantity-controls {
+    display: inline-flex;
+    gap: 8px;
+    margin-top: 8px;
+}
+.quantity-controls button {
+    width: 28px;
+    height: 28px;
+    background: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 700;
+}
+.quantity-controls button:hover {
+    background: #e0e0e0;
+}
+.quantity-controls button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 12px;
+}
+.app {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px;
+}
+.app h1 {
+    margin-bottom: 24px;
+    color: #222;
+    font-size: 32px;
+}
+   
